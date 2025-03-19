@@ -3,35 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>broclife.com - Coming Soon</title>
+    <title>broclife</title>
     <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #2E7D32;
+            --text-color: #ffffff;
+            --font-family: 'Arial', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            font-family: var(--font-family);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-color);
             text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
         }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+
+        header {
+            padding: 20px;
+            font-size: 2em;
+            font-weight: bold;
         }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            color: var(--text-color);
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
         img {
-            max-width: 30%;
+            max-width: 100%;
             height: auto;
+            border-radius: 10px;
+            margin-top: 15px;
         }
+
         footer {
             margin-top: 20px;
-            font-size: 1em;
+            font-size: 1.2em;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>broclife.com Coming Soon</h1>
-    <img src="broclife.jpg" alt="Coming Soon Image">
+    <header>broclife.com Coming Soon</header>
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#shop">Shop</a>
+        <a href="#coding">Coding</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Oh, dear broccoli, the emerald jewel of the vegetable kingdom! With your lush florets and sturdy stalks, you grace our plates with both beauty and nourishment. A powerhouse of vitamins, a warrior against disease, you have stood the test of time, delighting taste buds across generations. Your crisp texture and earthy taste elevate dishes to new heights, while your unwavering presence in health-conscious meals cements your place in our hearts forever. Long live broccoli!</p>
+        <img src="broclife.jpg" alt="A beautiful image of broccoli">
+    </section>
+
+    <section id="shop">
+        <h2>Shop</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisi vel consectetur malesuada, arcu metus tincidunt velit.</p>
+    </section>
+
+    <section id="coding">
+        <h2>Coding</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:info@broclife.com">info@broclife.com</a></p>
+        <p>Address: 123 Green Street, Broccoli Town, USA</p>
+    </section>
+
     <footer>
         <p>Site created by Vonnyboo | <a href="mailto:info@broclife.com">Contact</a></p>
     </footer>

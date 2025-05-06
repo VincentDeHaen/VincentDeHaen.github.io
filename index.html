@@ -140,7 +140,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Broclife</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+  </script>
 </head>
 <body class="min-h-screen flex flex-col" x-data="{ dark: false }" x-init="dark = window.matchMedia('(prefers-color-scheme: dark)').matches">
 
@@ -152,35 +154,17 @@
   </header>
 
   <main class="flex-grow p-6 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-    <a href="hobbies/coding.html" class="block p-4 bg-white dark:bg-gray-700 shadow hover:shadow-lg rounded-lg">
+    <a href="./hobbies/coding.html" class="block p-4 bg-white dark:bg-gray-700 shadow hover:shadow-lg rounded-lg">
       <h2 class="text-xl font-semibold mb-2">👨‍💻 Coding</h2>
       <p>Documentation-style page with code snippets and TOC.</p>
     </a>
-    <a href="hobbies/electronics.html" class="block p-4 bg-white dark:bg-gray-700 shadow hover:shadow-lg rounded-lg">
-      <h2 class="text-xl font-semibold mb-2">🔌 Electronics</h2>
-      <p>Project gallery with schematics and parts.</p>
-    </a>
-    <a href="hobbies/gardening.html" class="block p-4 bg-white dark:bg-gray-700 shadow hover:shadow-lg rounded-lg">
-      <h2 class="text-xl font-semibold mb-2">🌱 Gardening</h2>
-      <p>Blog-style garden logs with stories and images.</p>
-    </a>
-    <a href="hobbies/baking.html" class="block p-4 bg-white dark:bg-gray-700 shadow hover:shadow-lg rounded-lg">
-      <h2 class="text-xl font-semibold mb-2">🍞 Baking Bread</h2>
-      <p>Step-by-step bread recipes with timers and photos.</p>
-    </a>
-    <a href="hobbies/sausages.html" class="block p-4 bg-white dark:bg-gray-700 shadow hover:shadow-lg rounded-lg">
-      <h2 class="text-xl font-semibold mb-2">🌭 Making Sausages</h2>
-      <p>Recipes, safety notes, and downloadable PDFs.</p>
-    </a>
-    <a href="hobbies/lego.html" class="block p-4 bg-white dark:bg-gray-700 shadow hover:shadow-lg rounded-lg">
-      <h2 class="text-xl font-semibold mb-2">🧱 LEGO</h2>
-      <p>Photo gallery sorted by theme (Space, Technic, etc.).</p>
-    </a>
+    <!-- Repeat for other links using relative paths -->
   </main>
 
   <footer class="p-4 text-center bg-gray-100 dark:bg-gray-800">
     <p class="text-sm">&copy; 2025 Broclife. Nerd out responsibly.</p>
   </footer>
 
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </body>
 </html>

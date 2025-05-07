@@ -20,10 +20,10 @@
       background: url('images/broclife.jpg') no-repeat center center;
       background-size: cover;
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      top: 10%;
+      left: 20%;
+      right: 20%;
+      bottom: 10%;
       opacity: 0.7;
       z-index: -1;
     }
@@ -56,27 +56,62 @@
 
 <!-- Main hobby grid -->
 <main class="flex-grow p-6 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-  <a href="./hobbies/coding.html" class="block p-4 bg-white dark:bg-gray-700 shadow hover:shadow-lg rounded-lg">
+  <!-- Coding -->
+  <a href="./hobbies/coding.html"
+     class="block p-4 rounded-lg shadow-lg backdrop-blur-md bg-white/40 dark:bg-gray-700/40 border border-white/30 dark:border-gray-500/30 transition-transform hover:scale-105"
+     x-data="{ slide: 0, images: ['images/coding-1.png', 'images/coding-2.png', 'images/coding-3.png'] }"
+     x-init="setInterval(() => slide = (slide + 1) % images.length, 3000)">
+    <img :src="images[slide]" alt="Coding" class="w-full h-40 object-cover rounded mb-3 transition-opacity duration-500" />
     <h2 class="text-xl font-semibold mb-2">👨‍💻 Coding</h2>
-    <p>Documentation-style page with code snippets and TOC.</p>
+    <p>Code snippets</p>
   </a>
-  <a href="./hobbies/electronics.html" class="block p-4 bg-white dark:bg-gray-700 shadow hover:shadow-lg rounded-lg">
+
+  <!-- Electronics -->
+  <a href="./hobbies/electronics.html"
+     class="block p-4 rounded-lg shadow-lg backdrop-blur-md bg-white/40 dark:bg-gray-700/40 border border-white/30 dark:border-gray-500/30 transition-transform hover:scale-105"
+     x-data="{ slide: 0, images: ['images/electronics-1.jpg', 'images/electronics-2.jpg', 'images/electronics-3.jpg'] }"
+     x-init="setInterval(() => slide = (slide + 1) % images.length, 3000)">
+    <img :src="images[slide]" alt="Electronics" class="w-full h-40 object-cover rounded mb-3 transition-opacity duration-500" />
     <h2 class="text-xl font-semibold mb-2">🔌 Electronics</h2>
     <p>Project gallery with schematics and parts.</p>
   </a>
-  <a href="./hobbies/gardening.html" class="block p-4 bg-white dark:bg-gray-700 shadow hover:shadow-lg rounded-lg">
+
+  <!-- Gardening -->
+  <a href="./hobbies/gardening.html"
+     class="block p-4 rounded-lg shadow-lg backdrop-blur-md bg-white/40 dark:bg-gray-700/40 border border-white/30 dark:border-gray-500/30 transition-transform hover:scale-105"
+     x-data="{ slide: 0, images: ['images/gardening-1.jpg', 'images/gardening-2.jpg', 'images/gardening-3.jpg'] }"
+     x-init="setInterval(() => slide = (slide + 1) % images.length, 3000)">
+    <img :src="images[slide]" alt="Gardening" class="w-full h-40 object-cover rounded mb-3 transition-opacity duration-500" />
     <h2 class="text-xl font-semibold mb-2">🌱 Gardening</h2>
     <p>Blog-style garden logs with stories and images.</p>
   </a>
-  <a href="./hobbies/baking.html" class="block p-4 bg-white dark:bg-gray-700 shadow hover:shadow-lg rounded-lg">
+
+  <!-- Baking Bread -->
+  <a href="./hobbies/baking.html"
+     class="block p-4 rounded-lg shadow-lg backdrop-blur-md bg-white/40 dark:bg-gray-700/40 border border-white/30 dark:border-gray-500/30 transition-transform hover:scale-105"
+     x-data="{ slide: 0, images: ['images/baking-1.jpg', 'images/baking-2.jpg', 'images/baking-3.jpg'] }"
+     x-init="setInterval(() => slide = (slide + 1) % images.length, 3000)">
+    <img :src="images[slide]" alt="Baking" class="w-full h-40 object-cover rounded mb-3 transition-opacity duration-500" />
     <h2 class="text-xl font-semibold mb-2">🍞 Baking Bread</h2>
     <p>Step-by-step bread recipes with timers and photos.</p>
   </a>
-  <a href="./hobbies/sausages.html" class="block p-4 bg-white dark:bg-gray-700 shadow hover:shadow-lg rounded-lg">
+
+  <!-- Sausages -->
+  <a href="./hobbies/sausages.html"
+     class="block p-4 rounded-lg shadow-lg backdrop-blur-md bg-white/40 dark:bg-gray-700/40 border border-white/30 dark:border-gray-500/30 transition-transform hover:scale-105"
+     x-data="{ slide: 0, images: ['images/sausages-1.png', 'images/sausages-2.png', 'images/sausages-3.png'] }"
+     x-init="setInterval(() => slide = (slide + 1) % images.length, 3000)">
+    <img :src="images[slide]" alt="Sausages" class="w-full h-40 object-cover rounded mb-3 transition-opacity duration-500" />
     <h2 class="text-xl font-semibold mb-2">🌭 Making Sausages</h2>
     <p>Recipes, safety notes, and downloadable PDFs.</p>
   </a>
-  <a href="./hobbies/lego.html" class="block p-4 bg-white dark:bg-gray-700 shadow hover:shadow-lg rounded-lg">
+
+  <!-- LEGO -->
+  <a href="./hobbies/lego.html"
+     class="block p-4 rounded-lg shadow-lg backdrop-blur-md bg-white/40 dark:bg-gray-700/40 border border-white/30 dark:border-gray-500/30 transition-transform hover:scale-105"
+     x-data="{ slide: 0, images: ['images/lego-1.jpg', 'images/lego-2.jpg', 'images/lego-3.jpg'] }"
+     x-init="setInterval(() => slide = (slide + 1) % images.length, 3000)">
+    <img :src="images[slide]" alt="LEGO" class="w-full h-40 object-cover rounded mb-3 transition-opacity duration-500" />
     <h2 class="text-xl font-semibold mb-2">🧱 LEGO</h2>
     <p>Photo gallery sorted by theme (Space, Technic, etc.).</p>
   </a>
